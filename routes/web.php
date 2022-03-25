@@ -45,7 +45,7 @@ Route::group(['prefix' => 'customer', 'middleware' => ['auth','role:customer']],
     Route::get('/', function () {
         return view('frontend.more');
     });
-
+    Route::resource('buku', BukuController::class);
 
 });
 

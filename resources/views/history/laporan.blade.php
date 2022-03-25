@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.user')
  @section('content')
-     <div class="content-header">
+     <div class="content">
      </div>
  @endsection
  @section('css')
@@ -17,8 +17,7 @@
      <div class="col-lg-12">
          <div class="card">
              <div class="card-header">
-                 <button id="printPageButton" onclick="window.print();" class="btn btn-primary"><i
-                         class="fa fa-print">Print</i></button>
+                 
              </div>
              <!-- /.card-heading -->
              <div class="card-body">
@@ -48,10 +47,11 @@
                                          @endif
                                      </td>
                                      <td>Rp. {{ number_format($pesanan->jumlah_harga) }}</td>
-                                     {{-- <td>
+                                      <td>
                                          <a href="{{ url('history') }}/{{ $pesanan->id }}" class="btn btn-primary"><i
                                                  class="fa fa-info"></i> Detail</a>
-                                     </td> --}}
+                                                 
+                                     </td> 
                                  </tr>
 
 

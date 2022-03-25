@@ -1,18 +1,26 @@
-@extends('layouts.app')
+@extends('layouts.user')
+
+@section('container')
+@endsection
+@section('css')
+     <style>
+         @media print {
+             #printPageButton {
+                 display: none;
+             }
+         }
+
+     </style>
+ @endsection
+
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <a href="{{ url('/') }}" class="btn btn-primary"><i class="fa fa-arrow-left"></i> Kembali</a>
             </div>
-            <div class="col-md-12 mt-2">
-                <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
-                        <li class="breadcrumb-item active" aria-current="page">Riwayat Pemesanan</li>
-                    </ol>
-                </nav>
-            </div>
+            
+            
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
@@ -45,6 +53,7 @@
                                         <td>
                                             <a href="{{ url('history') }}/{{ $pesanan->id }}" class="btn btn-primary"><i
                                                     class="fa fa-info"></i> Detail</a>
+                                                    
                                         </td>
                                     </tr>
                                 @endforeach
@@ -56,4 +65,6 @@
 
         </div>
     </div>
+@endsection
+@section('footer')
 @endsection

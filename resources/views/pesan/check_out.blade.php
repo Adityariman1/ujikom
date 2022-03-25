@@ -1,5 +1,19 @@
-@extends('layouts.app')
-@section('content')
+@extends('layouts.user')
+@section('container')
+<!-- NAVIGATION -->
+<nav id="navigation">
+        <!-- container -->
+        <div class="container">
+            <!-- responsive-nav -->
+            <div id="responsive-nav">
+                <!-- NAV -->
+                <!-- /NAV -->
+            </div>
+            <!-- /responsive-nav -->
+        </div>
+        <!-- /container -->
+    </nav>
+    <!-- /NAVIGATION -->
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -9,8 +23,8 @@
 
             </div>
             <div class="col-md-12">
-                <div class="card">
-                    <div class="card-body">
+                <div class="card ">
+                    <div class="card-body ">
                         <h3><i class="fa fa-shopping-cart"></i> Check Out</h3>
                         @if (!empty($pesanan))
                             
@@ -19,7 +33,7 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Gambar</th>
-                                        <th>Tanggal Pesan</th>
+                                        <th>Tanggal Pesan</th>  
                                         <th>Nama buku </th>
                                         <th>Jumlah</th>
                                         <th>Harga</th>
@@ -69,8 +83,15 @@
                         @endif
                     </div>
                 </div>
-            </div>
+                <div id="newsletter" class="section py-4">
+        <!-- container -->
 
+        <!-- /container -->
+    </div>
+            </div>
+            
         </div>
     </div>
+@endsection
+@section('footer')
 @endsection

@@ -40,13 +40,12 @@ Route::get('konfirmasi-check-out', [PesanController::class, 'konfirmasi']);
 Route::get('history', [HistoryController::class, 'index']);
 Route::get('history/{id}', [HistoryController::class, 'detail']);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::resource('buku', BukuController::class);
 
 Route::group(['prefix' => 'customer', 'middleware' => ['auth','role:customer']], function () {
     Route::get('/', function () {
         return view('frontend.more');
     });
-    Route::resource('buku', BukuController::class);
-
 });
 
 
